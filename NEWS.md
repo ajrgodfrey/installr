@@ -1,3 +1,11 @@
+﻿installr 0.22.2 (2020-03-13)
+---------------------------
+
+UPDATED FUNCTIONS:
+install.python to make OS-agnostic
+
+
+
 installr 0.22.1 (2019-12-13)
 ---------------------------
 

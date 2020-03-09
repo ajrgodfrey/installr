@@ -40,6 +40,11 @@ install.python = function (page_with_download_url = "https://www.python.org/down
                            x64 = TRUE,
                              ...)
 {
+if(!is.windows()){
+  message("This function is only available to Windows users at present.\n")
+  return(FALSE)
+} # or if Windows then do the rest below
+else{
   page <- readLines(page_with_download_url, warn = FALSE)
   pat <- paste0("Latest Python ",version_number," Release")
   pat_exact_version <- paste0("Python ",version_number,"[0-9.]+")
@@ -62,5 +67,6 @@ install.python = function (page_with_download_url = "https://www.python.org/down
   }  
 
   install.URL(URL, ...) 
+}
 }
 
